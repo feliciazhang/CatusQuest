@@ -12,17 +12,20 @@ $c-teal: #14C0B6;
 $c-lime: #B1DD52;
 $c-silver: linear-gradient(251.42deg, #F4F4F4 6.27%, #ADADAD 36.2%, #D5D5D5 65.71%, #868686 89.62%);
 
+$cursor-auto: url("http://www.rw-designer.com/cursor-extern.php?id=111129"), auto;
+$cursor-pointer: url("http://www.rw-designer.com/cursor-extern.php?id=111142"), pointer;
+
 // GENERAL STYLES
 body {
   background-color: $c-dark;
   font-family: 'Roboto Mono', monospace;
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=111129"), auto;
+  cursor: $cursor-auto;
   color: $c-pink;
 }
 
 a {
   text-decoration: none;
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=111142"), pointer;
+  cursor: $cursor-pointer
 }
 
 main {
@@ -80,6 +83,23 @@ main {
   top: 50px;
   left: 20%;
 }
+
+.arrows {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  transform: translateY(50%);
+
+  svg {
+    width: 130px;
+    height: 130px;
+  }
+
+  .right-arrow {
+    cursor: $cursor-pointer;
+  }
+}
+
 
 .bottom-screen {
   position: absolute;
