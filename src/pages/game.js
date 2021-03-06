@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Console from "assets/svg/Console";
+import ColorPicker from "components/ColorPicker";
 import BottomScreen from "components/BottomScreen";
 import { scenes } from "data/scenes";
 
@@ -20,18 +21,22 @@ const GamePage = () => {
     } else {
       setShowQuestion(true);
     }
-  }
+  };
 
   return (
     <div className="game-page">
       <div className="console-wrapper">
-        <Console />
+        <Console color={consoleColor} />
         <div className="top-screen"></div>
-        <BottomScreen
-          scene={scene}
-          descriptionIdx={descriptionIdx}
-          showQuestion={showQuestion}
-        />
+        {pageId === COLOR ? (
+          <ColorPicker color={consoleColor} setColor={setConsoleColor} />
+        ) : (
+          <BottomScreen
+            scene={scene}
+            descriptionIdx={descriptionIdx}
+            showQuestion={showQuestion}
+          />
+        )}
         <button onClick={handleNextClick}>Next</button>
       </div>
     </div>
