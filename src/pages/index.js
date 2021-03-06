@@ -1,5 +1,6 @@
 import React from 'react'
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
+import { Link } from "gatsby"
 import "../styles/main.scss"
 
 const Layout = ({ children }) => (
@@ -26,8 +27,8 @@ const IndexPage = () => {
   return (
     <div>
       <main>
-        <h1 className='title'>CATU'S<br />QUEST</h1>
-        <a href="/" className='start-btn'>PRESS START</a>
+        <h1 className='title'>CATU'S<br/>QUEST</h1>
+        <Link to="/game" className='start-btn'>PRESS START</Link>
       </main>
     </div>
   );
