@@ -1,7 +1,9 @@
 # ✨ CATU'S QUEST ✨
-## 👻 HAPPY 24TH BIRTHDAY CATU!
+
+ 👻 HAPPY 24TH BIRTHDAY CATU! do u accept this quest...?
 
 ## ✂️ instructions for glennjamin
+
 - add photos to `static/img`
 - add audio files to `static/audio`
 - add data to `src/data/scenes.js` (example below)
@@ -15,7 +17,8 @@ const catusRoom = {
       img: "img/example.png",
     },
     {
-      text:"",
+      text:
+        "> Eek! You open your eyes to see Ymer on your curtain. He’s scratching at something…\n> A milky white light starts to fill the room.", // use \n character for new lines
       img: "",
     },
   ],
@@ -23,14 +26,14 @@ const catusRoom = {
   options: [
     {
       text: "Go back to bed",
-      leadsTo: null,
+      leadsTo: null, // use null if no way forward
       message:
         "Uh oh! The white light burns through you and the rest of the known universe. Try again.",
       audio: "audio/example.mp3",
     },
     {
       text: "Investigate",
-      leadsTo: "zachsCave",
+      leadsTo: "zachsCave", // name of next scene object
       message: "Brave choice! #girlboss",
       audio: "",
     },
