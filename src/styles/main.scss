@@ -29,6 +29,10 @@ main {
 }
 
 // TITLE PAGE
+.title-page {
+  margin-top: 200px;
+}
+
 .title {
   font-family: 'Audiowide';
   font-size: 120px;
@@ -52,13 +56,19 @@ main {
 }
 
 // GAME PAGE
-.game-content {
+.game-page {
+  text-align: center;
+}
+
+.console-wrapper {
   box-sizing: border-box;
   padding: 20px 0;
   height: 100vh;
-}
-
-.game-console {
-
-  height: 100%;
+  
+  svg {
+    height: 100%;
+    rect {
+      fill: $c-purple;
+    }
+  }
 }

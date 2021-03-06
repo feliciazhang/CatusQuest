@@ -25,11 +25,9 @@ const App = () => (
 
 const IndexPage = () => {
   return (
-    <div>
-      <main>
-        <h1 className='title'>CATU'S<br/>QUEST</h1>
-        <Link to="/game" className='start-btn'>PRESS START</Link>
-      </main>
+    <div className="title-page">
+      <h1 className='title'>CATU'S<br/>QUEST</h1>
+      <Link to="/game" className='start-btn'>PRESS START</Link>
     </div>
   );
 };

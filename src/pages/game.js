@@ -1,12 +1,14 @@
 import * as React from "react";
-import console from '../images/console.svg';
-import "../styles/main.scss"
+import Console from "../assets/svg/Console";
+import "../styles/main.scss";
 
 // markup
 const GamePage = () => {
   return (
-    <div>
-      <img src={console} className="game-console"/>
+    <div className="game-page">
+      <div className="console-wrapper">
+        <Console />
+      </div>
     </div>
   );
 };
