@@ -15,6 +15,7 @@ $c-silver: linear-gradient(251.42deg, #F4F4F4 6.27%, #ADADAD 36.2%, #D5D5D5 65.7
 // GENERAL STYLES
 body {
   background-color: $c-dark;
+  font-family: 'Roboto Mono', monospace;
   cursor: url("http://www.rw-designer.com/cursor-extern.php?id=111129"), auto;
   color: $c-pink;
 }
@@ -90,4 +91,6 @@ main {
   height: 250px;
   bottom: 40px;
   left: 27%;
+  border-radius: 15px;
+  white-space: pre-line;
 }

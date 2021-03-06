@@ -1,10 +1,3 @@
-export const scenes = {
-  catusRoom,
-  zachsCave,
-  wrbb,
-  jeffDavis,
-};
-
 const catusRoom = {
   descriptions: [
     {
@@ -171,3 +164,11 @@ const jeffDavis = {
   audio: "",
   img: "",
 };
+
+export const scenes = {
+  catusRoom,
+  zachsCave,
+  wrbb,
+  jeffDavis,
+};
+
