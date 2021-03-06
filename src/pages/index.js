@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "gatsby"
 import "../styles/main.scss"
 
 // styles
@@ -141,7 +142,7 @@ const IndexPage = () => {
       </Helmet>
       <main style={pageStyles}>
         <h1 className='title'>CATU'S<br/>QUEST</h1>
-        <a href="/" className='start-btn'>PRESS START</a>
+        <Link to="/game" className='start-btn'>PRESS START</Link>
       </main>
     </div>
   );
