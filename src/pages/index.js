@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby"
-import "../styles/main.scss"
+import "styles/main.scss"
 
 const Layout = ({ children }) => (
   <div>

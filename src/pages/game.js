@@ -1,6 +1,6 @@
 import * as React from "react";
-import Console from "../assets/svg/Console";
-import "../styles/main.scss";
+import Console from "assets/svg/Console";
+import "styles/main.scss";
 
 // markup
 const GamePage = () => {

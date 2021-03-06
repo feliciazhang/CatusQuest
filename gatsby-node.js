@@ -8,3 +8,10 @@ exports.createPages = ({ actions }) => {
     component: path.resolve(`./src/pages/scene.js`),
   })
 }
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+    },
+  })
+}
