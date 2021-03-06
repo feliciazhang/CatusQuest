@@ -57,13 +57,14 @@ main {
 
 // GAME PAGE
 .game-page {
-  text-align: center;
+  display: flex;;
 }
 
 .console-wrapper {
   box-sizing: border-box;
-  padding: 20px 0;
-  height: 100vh;
+  height: 700px;
+  position: relative;
+  margin: 20px auto;
   
   svg {
     height: 100%;
@@ -71,4 +72,22 @@ main {
       fill: $c-purple;
     }
   }
+}
+
+.top-screen {
+  position: absolute;
+  background-color: $c-dark;
+  width: 60%;
+  height: 250px;
+  top: 50px;
+  left: 20%;
+}
+
+.bottom-screen {
+  position: absolute;
+  background-color: $c-dark;
+  width: 46%;
+  height: 250px;
+  bottom: 40px;
+  left: 27%;
 }

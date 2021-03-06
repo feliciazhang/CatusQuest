@@ -1,15 +1,13 @@
 import React from "react";
 
-const Console = () => (
+const Console = ({ color="#4D31BF" }) => (
   <svg
-    width="1134"
-    height="940"
     viewBox="0 0 1134 940"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect x="4" width="1126" height="470" rx="40" fill="#4D31BF" />
-    <rect x="4" y="470" width="1126" height="470" rx="40" fill="#4D31BF" />
+    <rect x="4" width="1126" height="470" rx="40" fill={color} />
+    <rect x="4" y="470" width="1126" height="470" rx="40" fill={color} />
     <circle cx="50.5" cy="118.5" r="6.5" fill="#080010" />
     <circle cx="50.5" cy="139.5" r="6.5" fill="#080010" />
     <ellipse cx="50.5" cy="161" rx="6.5" ry="6" fill="#080010" />
@@ -35,7 +33,7 @@ const Console = () => (
     <circle cx="1083.5" cy="330.5" r="6.5" fill="#080010" />
     <circle cx="1083.5" cy="351.5" r="6.5" fill="#080010" />
     <g filter="url(#filter0_di)">
-      <rect x="4" y="445" width="1126" height="56" rx="20" fill="#4D31BF" />
+      <rect x="4" y="445" width="1126" height="56" rx="20" fill={color} />
     </g>
     <path
       d="M996.578 448C1002.41 454.911 1005.08 482.232 996.578 502M129.422 448C123.587 454.911 120.92 482.232 129.422 502"
