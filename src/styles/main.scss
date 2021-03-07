@@ -83,6 +83,13 @@ main {
   display: flex;
 }
 
+.home-btn {
+  position: absolute;
+  font-family: "Audiowide";
+  font-size: 24px;
+  color: $c-pink;
+}
+
 .console-wrapper {
   box-sizing: border-box;
   height: 700px;

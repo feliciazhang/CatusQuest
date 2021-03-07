@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'gatsby';
 import { Layout } from "components/Layout";
 import ColorPicker from "components/ColorPicker";
 import TopScreen from "components/TopScreen";
@@ -68,6 +69,7 @@ const GamePage = () => {
   return (
     <Layout>
       <div className="game-page">
+        <Link className="home-btn" to="/">HOME</Link>
         <div className="console-wrapper">
           <Console color={consoleColor} />
           {!scene ? (
