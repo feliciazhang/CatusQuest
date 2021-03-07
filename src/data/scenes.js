@@ -27,7 +27,7 @@ const catusRoom = {
       audio: "",
     },
   ],
-  audio: "audio/example.mp3",
+  audio: "audio/blueside.mp3",
   img: "img/example.png",
 };
 
@@ -79,7 +79,7 @@ const zachsCave = {
       audio: "",
     },
   ],
-  audio: "",
+  audio: "audio/example.mp3",
   img: "",
 };
 
