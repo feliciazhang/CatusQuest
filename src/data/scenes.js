@@ -174,7 +174,6 @@ const jeffDavis = {
     {
       text:
         "Burn it to the ground. He should pay for his crimes. Maybe the world would be better off without Jeff anyways… ",
-      leadsTo: null,
       message: "Nice try, you petty bitch. Pick again.",
       audio: "audio/r-u-kidding-me.mp3",
     },
@@ -182,7 +181,7 @@ const jeffDavis = {
       text:
         "Knock on the door. Show him the world he could have created for Stiles and Derek with Tumblr fan edits. Help him get better.",
       leadsTo: "beaconHills",
-      message: "",
+      message: "Way to stick to what you believe in. You should ask him if he wants a pair of Sterek socks while you’re at it.",
       audio: "",
     },
     {
@@ -380,7 +379,7 @@ const prideAndPrejudice = {
     {
       text: "Engage Elizabeth in a battle of wits and end with the retort \“I could easily forgive your pride if you had not mortified mine\"",
       leadsTo: "ilMondo",// name of next scene object
-      message: "",
+      message: "Elizabeth concedes in your battle. She tells you “For what do we live, but to make sport for our neighbors, and laugh at them in our turn?” She will now make more of an effort to forgive those around her.",
       audio: "",
     },
   ],
@@ -905,7 +904,7 @@ const  fantasySuite = {
   options: [
     {
       text: "Run",
-      leadsTo: finalScene, // use null if no way forward
+      leadsTo: "finalScene", // use null if no way forward
       message:
         "Well that’s one way of doing it… looks like you ran out of there so fast you made it back to your dimension. Nice work! ",
       audio: "audio/",
