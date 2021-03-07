@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import Layout from "components/Layout";
 import "styles/main.scss";
 
 const EndPage = () => {
+  const audio = new Audio(`../audio/happy-birthday.mp3`);
+  useEffect(() => {
+    audio && audio.play();
+
+    return () => {
+      audio && audio.pause();
+    };
+  });
+
   return (
     <Layout>
       <div className="end-page">

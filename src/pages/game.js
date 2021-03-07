@@ -24,7 +24,7 @@ const GamePage = () => {
       roomAudio && roomAudio.pause();
       optionAudio && optionAudio.pause();
     };
-  }, [roomAudio]);
+  }, [roomAudio, optionAudio]);
 
   const resetScene = (scene) => {
     roomAudio && roomAudio.pause();
@@ -44,7 +44,7 @@ const GamePage = () => {
 
   const handleNextClick = () => {
     if (!scene) {
-      resetScene(scenes["catusRoom"]);
+      resetScene(scenes["finalScene"]);
     } else if (scene === scenes["youDie"]) {
       resetScene(null);
     } else if (sceneEndMessage && scene === scenes["finalScene"]) {

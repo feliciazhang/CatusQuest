@@ -6,7 +6,7 @@ const TopScreen = ({ scene, descriptionIdx }) => {
     ? descriptions[descriptionIdx].img
     : img;
 
-  return (<img className="top-screen-img" src={`../${imageSrc}`} />);
+  return (<img className="top-screen-img" src={`../${imageSrc}`} alt="Scene"/>);
 };
 
 export default TopScreen;
