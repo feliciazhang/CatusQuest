@@ -15,7 +15,6 @@ const catusRoom = {
   options: [
     {
       text: "Go back to bed",
-      leadsTo: null,
       message:
         "Uh oh! The white light burns through you and the rest of the known universe. Try again.",
       audio: "audio/agh.mp3",
@@ -69,13 +68,13 @@ const zachsCave = {
     {
       text: "Left",
       leadsTo: "jeffDavis",
-      message: "Interesting choice...",
+      message: "Good luck...",
       audio: "audio/laugh1.mp3",
     },
     {
       text: "Right",
       leadsTo: "wrbb",
-      message: "Interesting choice...",
+      message: "Good luck...",
       audio: "audio/laugh2.mp3",
     },
   ],
@@ -227,7 +226,6 @@ const beaconHills = {
         "I’m sorry… Save Scott? Pass. Focus instead on finding out more about how Sterek got together. Maybe someone has video?",
       message: "On the one hand, you save Sterek. On the other, you doom humanity if this change ripples across the universe in a calamitous way. Tough call there, but maybe reconsider.",
       audio: "audio/r-u-kidding-me.mp3",
-      audio: "",
     },
     {
       text:
@@ -258,14 +256,12 @@ const pen15 = {
   options: [
     {
       text: "Vision",
-      leadsTo: null, // use null if no way forward
       message:
         "I’m sorry. Vision is UGIS. Try again.",
       audio: "audio/agh.mp3",
     },
     {
       text: "Adam Driver",
-      leadsTo: null, // name of next scene object
       message: "I’m sorry. Adam Driver is UGIS. Try again.",
       audio: "audio/agh.mp3",
     },
@@ -278,7 +274,6 @@ const pen15 = {
     },
     {
       text: "Catalina Berretta",
-      leadsTo: null, // use null if no way forward
       message:
         "I’m sorry. Catu is UGIS. If she didn’t want to be UGIS, she would always take out the compost on time. Try again.",
       audio: "audio/r-u-kidding-me.mp3",
@@ -305,7 +300,6 @@ const solidGround = {
   options: [
     {
       text: "A large iced coffee with skim milk and extra caramel. ",
-      leadsTo: null, // use null if no way forward
       message:
         "Lucia overhears you and becomes suspicious-- she knows the real Catu would ask for a large iced coffee with skim milk, caramel and extra caramel. Somethings not right here, so she has Keith kick you out. Try again.",
       audio: "audio/r-u-kidding-me.mp3",
@@ -834,7 +828,6 @@ const bike = {
     },
     {
       text: "Towards an oddly wide road that curves out of view",
-      leadsTo: "ryderHall", // name of next scene object
       message: "Bro, you just rode your bike onto the frickin freeway. Get the hell out of there and choose again.",
       audio: "",
     },
@@ -877,7 +870,7 @@ const nathanForYou = {
 };
 
 
-const  fantasySuite = {
+const fantasySuite = {
   descriptions: [
     {
       text:
@@ -939,13 +932,13 @@ const finalScene = {
       text: "Tear down the curtains so Ymer won’t be able to climb them.",
       message:
         "You begin to relax, sprawled on the coach, “a little stoned”, in front of Box. Nothing has ever felt more right, and you know deep in your heart, the rift has been repaired.",
-      audio: "audio/than-you-all.mp3",
+      audio: "audio/thank-you-all.mp3",
     },
     {
       text: "Grab a joint just to get \"a little high.\".",
       message:
         "You begin to relax, sprawled on the coach, “a little stoned”, in front of Box. Nothing has ever felt more right, and you know deep in your heart, the rift has been repaired.",
-      audio: "audio/than-you-all.mp3",
+      audio: "audio/thank-you-all.mp3",
     },
   ],
   audio: "audio/hallelujia.mp3",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
 import { Layout } from "components/Layout";
 import ColorPicker from "components/ColorPicker";
 import TopScreen from "components/TopScreen";
@@ -20,24 +20,27 @@ const GamePage = () => {
   const [optionAudio, setOptionAudio] = useState(null);
 
   const resetScene = (scene) => {
-    roomAudio && roomAudio.pause()
-    optionAudio && optionAudio.pause()
+    roomAudio && roomAudio.pause();
+    optionAudio && optionAudio.pause();
     setScene(scene);
     setDescriptionIdx(0);
     setShowQuestion(false);
     setSceneEndMessage("");
     setOptionSelectedIdx(null);
     if (scene.audio) {
-      const newRoomAudio = new Audio(scene.audio)
-      setRoomAudio(newRoomAudio)
-      newRoomAudio.play()
+      console.log(scene.audio);
+      const newRoomAudio = new Audio(scene.audio);
+      setRoomAudio(newRoomAudio);
+      newRoomAudio.play();
     }
-    setOptionAudio(null)
+    setOptionAudio(null);
   };
 
   const handleNextClick = () => {
     if (!scene) {
       resetScene(scenes["catusRoom"]);
+    } else if (scene === scenes["youDie" || scene === scenes["finalScene"]]) {
+      resetScene(null);
     } else if (sceneEndMessage) {
       const { leadsTo } = scene.options[optionSelectedIdx];
       if (!leadsTo) {
@@ -61,19 +64,25 @@ const GamePage = () => {
     const { audio, audioTime = 0, message } = scene.options[idx];
     if (audio) {
       const audioFile = new Audio(audio);
-      setOptionAudio(audioFile)
-      audioFile.currentTime = audioTime
-      audioFile.play()
-      setTimeout(() => { audioFile.pause() }, 2000)
+      setOptionAudio(audioFile);
+      audioFile.currentTime = audioTime;
+      audioFile.play();
+      setTimeout(() => {
+        audioFile.pause();
+      }, 2000);
     }
     setSceneEndMessage(message);
     setOptionSelectedIdx(idx);
   };
 
+  const showOptions = scene && showQuestion && scene.options;
+
   return (
     <Layout>
       <div className="game-page">
-        <Link className="home-btn" to="/">HOME</Link>
+        <Link className="home-btn" to="/">
+          HOME
+        </Link>
         <div className="console-wrapper">
           <Console color={consoleColor} />
           {!scene ? (
@@ -103,10 +112,9 @@ const GamePage = () => {
               <button
                 key={`option-btn-${idx}`}
                 className={`answer-btn ${
-                  scene &&
-                  showQuestion &&
-                  idx >= scene.options.length &&
-                  "answer-btn-disabled"
+                  showOptions && idx >= scene.options.length
+                    ? "answer-btn-disabled"
+                    : ""
                 }`}
                 onClick={() => handleOptionSelect(idx)}
               >
