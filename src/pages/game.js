@@ -19,6 +19,13 @@ const GamePage = () => {
   const [roomAudio, setRoomAudio] = useState(null);
   const [optionAudio, setOptionAudio] = useState(null);
 
+  useEffect(() => {
+    return () => {
+      roomAudio && roomAudio.pause();
+      optionAudio && optionAudio.pause();
+    };
+  }, [roomAudio]);
+
   const resetScene = (scene) => {
     roomAudio && roomAudio.pause();
     optionAudio && optionAudio.pause();
