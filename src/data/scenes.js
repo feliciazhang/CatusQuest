@@ -3,12 +3,12 @@ const catusRoom = {
     {
       text:
         "> You are asleep in bed until a faint sks sks sks sound wakes you up. Wait a damn minute…",
-      img: "img/example.png",
+      img: "img/catus-room.png",
     },
     {
       text:
         "> Eek! You open your eyes to see Ymer on your curtain. He’s scratching at something…\n> A milky white light starts to fill the room.",
-      img: "",
+      img: "img/catus-room.png",
     },
   ],
   question: "What do you do?",

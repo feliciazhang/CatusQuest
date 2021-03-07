@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Layout } from "./index";
 import ColorPicker from "components/ColorPicker";
+import TopScreen from "components/TopScreen";
 import BottomScreen from "components/BottomScreen";
 import { scenes } from "data/scenes";
 import Console from "assets/svg/Console";
@@ -57,7 +58,15 @@ const GamePage = () => {
       <div className="game-page">
         <div className="console-wrapper">
           <Console color={consoleColor} />
-          <div className="top-screen"></div>
+          {!scene ? (
+            <div className="top-screen">
+              <p className="top-screen-instructions">
+                SELECT A CONSOLE COLOR THEN PRESS THE RIGHT ARROW TO BEGIN
+              </p>
+            </div>
+          ) : (
+            <TopScreen scene={scene} descriptionIdx={descriptionIdx} />
+          )}
           <div className="arrows">
             <Arrows onClick={handleNextClick} />
           </div>
@@ -76,7 +85,10 @@ const GamePage = () => {
               <button
                 key={`option-btn-${idx}`}
                 className={`answer-btn ${
-                  scene && showQuestion && idx >= scene.options.length && "answer-btn-disabled"
+                  scene &&
+                  showQuestion &&
+                  idx >= scene.options.length &&
+                  "answer-btn-disabled"
                 }`}
                 onClick={() => handleOptionSelect(idx)}
               >

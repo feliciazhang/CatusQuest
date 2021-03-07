@@ -95,14 +95,25 @@ main {
 }
 
 // TOP SCREEN
-.top-screen {
+.top-screen,
+.top-screen-img {
   position: absolute;
   background-color: $c-dark;
-  width: 60%;
+  width: 80%;
   height: 250px;
-  top: 50px;
-  left: 20%;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 15px;
+}
+
+.top-screen-instructions {
+  font-family: "Press Start 2P";
+  font-size: 24px;
+  text-align: center;
+  width: 80%;
+  margin: 30px auto;
+  line-height: 1.4em;
 }
 
 // ARROW BUTTONS
