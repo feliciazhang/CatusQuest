@@ -27,10 +27,12 @@ const GamePage = () => {
     setShowQuestion(false);
     setSceneEndMessage("");
     setOptionSelectedIdx(null);
-    const newRoomAudio = new Audio(scene.audio)
-    setRoomAudio(newRoomAudio)
+    if (scene.audio) {
+      const newRoomAudio = new Audio(scene.audio)
+      setRoomAudio(newRoomAudio)
+      newRoomAudio.play()
+    }
     setOptionAudio(null)
-    newRoomAudio.play()
   };
 
   const handleNextClick = () => {
@@ -56,11 +58,13 @@ const GamePage = () => {
     if (!showQuestion || idx >= scene.options.length) {
       return;
     }
-    const { audio, message } = scene.options[idx];
+    const { audio, audioTime = 0, message } = scene.options[idx];
     if (audio) {
       const audioFile = new Audio(audio);
       setOptionAudio(audioFile)
+      audioFile.currentTime = audioTime
       audioFile.play()
+      setTimeout(() => { audioFile.pause() }, 2000)
     }
     setSceneEndMessage(message);
     setOptionSelectedIdx(idx);
