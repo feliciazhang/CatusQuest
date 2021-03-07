@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Layout } from "./index";
 import ColorPicker from "components/ColorPicker";
 import BottomScreen from "components/BottomScreen";
 import { scenes } from "data/scenes";
@@ -11,39 +12,81 @@ const GamePage = () => {
   const [consoleColor, setConsoleColor] = useState("#4D31BF");
   const [descriptionIdx, setDescriptionIdx] = useState(0);
   const [showQuestion, setShowQuestion] = useState(false);
+  const [sceneEndMessage, setSceneEndMessage] = useState("");
+  const [optionSelectedIdx, setOptionSelectedIdx] = useState(null);
+
+  const resetScene = (scene) => {
+    setScene(scene);
+    setDescriptionIdx(0);
+    setShowQuestion(false);
+    setSceneEndMessage("");
+    setOptionSelectedIdx(null);
+  };
 
   const handleNextClick = () => {
-    console.log(scene);
     if (!scene) {
       setScene(scenes["catusRoom"]);
-    } else {
-      if (descriptionIdx < scene.descriptions.length - 1) {
-        setDescriptionIdx(descriptionIdx + 1);
-      } else {
+    } else if (sceneEndMessage) {
+      const { leadsTo } = scene.options[optionSelectedIdx];
+      if (!leadsTo) {
         setShowQuestion(true);
+        setSceneEndMessage("");
+        setOptionSelectedIdx(null);
+      } else {
+        resetScene(scenes[leadsTo]);
       }
+    } else if (descriptionIdx < scene.descriptions.length - 1) {
+      setDescriptionIdx(descriptionIdx + 1);
+    } else {
+      setShowQuestion(true);
     }
   };
 
+  const handleOptionSelect = (idx) => {
+    if (!showQuestion || idx >= scene.options.length) {
+      return;
+    }
+
+    const { audio, message } = scene.options[idx];
+    setSceneEndMessage(message);
+    setOptionSelectedIdx(idx);
+  };
+
   return (
-    <div className="game-page">
-      <div className="console-wrapper">
-        <Console color={consoleColor} />
-        <div className="top-screen"></div>
-        <div className="arrows">
-          <Arrows onClick={handleNextClick}/>
+    <Layout>
+      <div className="game-page">
+        <div className="console-wrapper">
+          <Console color={consoleColor} />
+          <div className="top-screen"></div>
+          <div className="arrows">
+            <Arrows onClick={handleNextClick} />
+          </div>
+          {!scene ? (
+            <ColorPicker color={consoleColor} setColor={setConsoleColor} />
+          ) : (
+            <BottomScreen
+              scene={scene}
+              descriptionIdx={descriptionIdx}
+              showQuestion={showQuestion}
+              sceneEndMessage={sceneEndMessage}
+            />
+          )}
+          <div className="answer-btn-group">
+            {["A", "B", "C", "D"].map((option, idx) => (
+              <button
+                key={`option-btn-${idx}`}
+                className={`answer-btn ${
+                  scene && showQuestion && idx >= scene.options.length && "answer-btn-disabled"
+                }`}
+                onClick={() => handleOptionSelect(idx)}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
         </div>
-        {!scene ? (
-          <ColorPicker color={consoleColor} setColor={setConsoleColor} />
-        ) : (
-          <BottomScreen
-            scene={scene}
-            descriptionIdx={descriptionIdx}
-            showQuestion={showQuestion}
-          />
-        )}
       </div>
-    </div>
+    </Layout>
   );
 };
 

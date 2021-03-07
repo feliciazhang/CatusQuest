@@ -2,34 +2,41 @@
 
 // Core colors
 $c-dark: #080010;
-$c-pink: #FF00F5;
-$c-magenta: #B200AA;
-$c-light-pink: #FFDAFE;
+$c-pink: #ff00f5;
+$c-magenta: #b200aa;
+$c-light-pink: #ffdafe;
 
 // Console colors
-$c-purple: #4D31BF;
-$c-teal: #14C0B6;
-$c-lime: #B1DD52;
-$c-silver: linear-gradient(251.42deg, #F4F4F4 6.27%, #ADADAD 36.2%, #D5D5D5 65.71%, #868686 89.62%);
+$c-purple: #4d31bf;
+$c-teal: #14c0b6;
+$c-lime: #b1dd52;
+$c-silver: linear-gradient(
+  251.42deg,
+  #f4f4f4 6.27%,
+  #adadad 36.2%,
+  #d5d5d5 65.71%,
+  #868686 89.62%
+);
 
-$cursor-auto: url("http://www.rw-designer.com/cursor-extern.php?id=111129"), auto;
-$cursor-pointer: url("http://www.rw-designer.com/cursor-extern.php?id=111142"), pointer;
+$cursor-auto: url("http://www.rw-designer.com/cursor-extern.php?id=111129"),
+  auto;
+$cursor-pointer: url("http://www.rw-designer.com/cursor-extern.php?id=111142"),
+  pointer;
 
 // GENERAL STYLES
 body {
   background-color: $c-dark;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   cursor: $cursor-auto;
   color: $c-pink;
 }
 
 a {
   text-decoration: none;
-  cursor: $cursor-pointer
+  cursor: $cursor-pointer;
 }
 
 main {
-  text-align: center;
 }
 
 // TITLE PAGE
@@ -38,16 +45,17 @@ main {
 }
 
 .title {
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
   font-size: 120px;
   color: $c-pink;
   line-height: 1.1em;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
+    0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
 }
 
 .start-btn {
   display: block;
-  font-family: 'Press Start 2P';
+  font-family: "Press Start 2P";
   font-size: 30px;
   color: $c-pink;
   animation: blink 1s linear infinite;
@@ -61,7 +69,7 @@ main {
 
 // GAME PAGE
 .game-page {
-  display: flex;;
+  display: flex;
 }
 
 .console-wrapper {
@@ -69,12 +77,13 @@ main {
   height: 700px;
   position: relative;
   margin: 20px auto;
-  
+
   svg {
     height: 100%;
   }
 }
 
+// TOP SCREEN
 .top-screen {
   position: absolute;
   background-color: $c-dark;
@@ -84,6 +93,7 @@ main {
   left: 20%;
 }
 
+// ARROW BUTTONS
 .arrows {
   position: absolute;
   bottom: 25%;
@@ -100,8 +110,9 @@ main {
   }
 }
 
-
+// BOTTOM SCREEN
 .bottom-screen {
+  box-sizing: border-box;
   position: absolute;
   background-color: $c-dark;
   width: 46%;
@@ -110,11 +121,81 @@ main {
   left: 27%;
   border-radius: 15px;
   white-space: pre-line;
+  padding: 16px;
+
+  p {
+    margin: 0;
+  }
 }
 
+// COLOR PICKER
 .sketch-picker {
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ANSWER BUTTONS
+.answer-btn-group {
+  position: absolute;
+  bottom: 25%;
+  right: 5%;
+  transform: translateY(50%);
+  width: 140px;
+  height: 140px;
+}
+
+.answer-btn {
+  position: absolute;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  appearance: none;
+
+  background-color: $c-light-pink;
+  color: $c-magenta;
+  font-family: "Audiowide";
+  border-radius: 50%;
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  cursor: $cursor-pointer;
+  
+  &:focus {
+    outline: 0;
+  }
+
+  &-disabled {
+    opacity: 60%;
+    cursor: not-allowed;
+  }
+}
+
+// A
+.answer-btn:nth-child(1) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+// B
+.answer-btn:nth-child(2) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// C
+.answer-btn:nth-child(3) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+// D
+.answer-btn:nth-child(4) {
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }

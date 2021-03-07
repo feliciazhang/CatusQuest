@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "gatsby"
 import "styles/main.scss"
 
-const Layout = ({ children }) => (
+export const Layout = ({ children }) => (
   <div>
     <Helmet>
       <meta charSet="utf-8" />
