@@ -676,7 +676,7 @@ const triwizard = {
     {
       text:
         "Amos Diggory falls to his knees beside you. He’s so upset that he’s at a loss for words.", // use \n character for new lines
-      img: "tw2.png",
+      img: "img/tw2.png",
     },
   ],
   question: "Help Amos decide what to say next.",
@@ -907,7 +907,7 @@ const  fantasySuite = {
       leadsTo: "finalScene", // use null if no way forward
       message:
         "Well that’s one way of doing it… looks like you ran out of there so fast you made it back to your dimension. Nice work! ",
-      audio: "audio/",
+      audio: "",
     },
     {
       text: "Tell Matt you're falling for him too.",
