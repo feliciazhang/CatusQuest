@@ -991,6 +991,8 @@ export const scenes = {
   nathanForYou, 
   fantasySuite, 
   finalScene, 
-  youDie
+  youDie, 
+  triwizard, 
+  cabot
 };
 
