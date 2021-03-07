@@ -390,7 +390,7 @@ const forks = {
     },
     {
       text:
-        "> You see Bella’s red pickup parked in front of you. Inside, she’s drafting a pro-con list for Jacon and Edward.", // use \n character for new lines
+        "> You see Bella’s red pickup parked in front of you. Inside, she’s drafting a pro-con list for Jacob and Edward.", // use \n character for new lines
       img: "img/forks2.png",
     },
   ],
