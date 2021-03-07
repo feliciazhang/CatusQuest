@@ -109,7 +109,7 @@ const wrbb = {
       text: "Supermassive Black Hole by Muse",
       leadsTo: "forks",
       message: "Set those souls alight!",
-      audio: "audio/supermassive-black-home.mp3",
+      audio: "audio/supermassive-black-hole.mp3",
     },
     {
       text: "Driver's License by Olivia Rodrigo",
