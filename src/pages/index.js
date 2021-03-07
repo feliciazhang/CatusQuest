@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <div className="title-page">
       <h1 className='title'>CATU'S<br/>QUEST</h1>
-      <Link to="/game" className='start-btn'>PRESS START</Link>
+      <Link to="../game" className='start-btn'>PRESS START</Link>
     </div>
   );
 };
