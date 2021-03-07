@@ -6,7 +6,7 @@ const BottomScreen = ({ scene, descriptionIdx, showQuestion, sceneEndMessage }) 
   const messageToShow = sceneEndMessage || (!showQuestion && descriptions[descriptionIdx].text)
 
   return (
-    <div className="bottom-screen">
+    <div className="bottom-screen disable-selection">
 
       {messageToShow ? (
         <p>{messageToShow}</p>
