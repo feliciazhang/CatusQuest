@@ -1,5 +1,5 @@
 import React from "react";
-import { ChromePicker, SketchPicker } from "react-color";
+import { SketchPicker } from "react-color";
 
 const ColorPicker = ({ color, setColor }) => (
   <div className="bottom-screen">

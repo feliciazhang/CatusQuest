@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout } from "./index";
+import { Layout } from "components/Layout";
 import ColorPicker from "components/ColorPicker";
 import TopScreen from "components/TopScreen";
 import BottomScreen from "components/BottomScreen";

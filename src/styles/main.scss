@@ -146,9 +146,14 @@ main {
   border-radius: 15px;
   white-space: pre-line;
   padding: 16px;
+  overflow-y: scroll;
 
   p {
     margin: 0;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 

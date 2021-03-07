@@ -8,7 +8,7 @@ const catusRoom = {
     {
       text:
         "> Eek! You open your eyes to see Ymer on your curtain. He’s scratching at something…\n> A milky white light starts to fill the room.",
-      img: "img/catus-room.png",
+      img: "img/example.png",
     },
   ],
   question: "What do you do?",
@@ -69,18 +69,18 @@ const zachsCave = {
     {
       text: "Door 1",
       leadsTo: "jeffDavis",
-      message: "",
+      message: "Interesting choice...",
       audio: "",
     },
     {
       text: "Door 2",
       leadsTo: "wrbb",
-      message: "",
+      message: "Interesting choice...",
       audio: "",
     },
   ],
   audio: "audio/example.mp3",
-  img: "",
+  img: "img/example.png",
 };
 
 const wrbb = {
@@ -147,7 +147,7 @@ const jeffDavis = {
     },
     {
       text:
-        "Knock on the door. Show him the world he could have created for Stiles and Derek with tumblr fan edits. Help him get better.",
+        "Knock on the door. Show him the world he could have created for Stiles and Derek with Tumblr fan edits. Help him get better.",
       leadsTo: "beaconHills",
       message: "",
       audio: "",
@@ -165,10 +165,56 @@ const jeffDavis = {
   img: "",
 };
 
+const beaconHills = {
+  descriptions: [
+    {
+      text:
+        ">  You blink and you’re standing outside again, near a lacrosse field. It’s colder, and the moon is full. A howl pierces the air, and one of the players whips towards you, his red eyes piercing yours. Could this be… Beacon Hills?",
+      img: "",
+    },
+    {
+      text:
+        "> You walk over to the sidelines. Everyone is here: Scott, Isaac, Lydia, Allison… Everyone except Stiles. He should be playing! And where is Derek?\n> Behind you, the pack of Alphas emerges from the woods. They head towards Scott-- looks like they’re going to attack!",
+      img: "",
+    },
+    {
+      text:
+        "> You: It’ll be okay. With the help of Stiles and the rest of his pack, Scott will win.\n> Allison: Stiles? He’s barely been around since he and Derek started dating. He’s become a horrible friend, and without him and Derek here, Scott’s gonna die!",
+      img: "",
+    },
+    {
+      text:
+        ">  Zach told you not to play God in other realms… maybe in order to save Scott you have to make things right.",
+      img: "",
+    },
+  ],
+  question: "How do you fix things in Beacon Hills?",
+  options: [
+    {
+      text:
+        "I’m sorry… Save Scott? Pass. Focus instead on finding out more about how Sterek got together. Maybe someone has video?",
+      leadsTo: null,
+      message: "On the one hand, you save Sterek. On the other, you doom humanity if this change ripples across the universe in a calamitous way. Tough call there, but maybe reconsider.",
+      audio: "",
+    },
+    {
+      text:
+        "Track down Stiles and Derek so they can come help Scott face the Alphas. Then, find a way to break them up (probably by seducing Stiles). It’s the only way.",
+      leadsTo: "ilMondo",
+      message: "",
+      audio: "",
+    },
+  ],
+  audio: "",
+  img: "",
+};
+
+
 export const scenes = {
   catusRoom,
   zachsCave,
   wrbb,
   jeffDavis,
+  beaconHills,
 };
 

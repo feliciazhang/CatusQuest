@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const BottomScreen = ({ scene, descriptionIdx, showQuestion, sceneEndMessage }) => {
   const { descriptions, question, options } = scene;
