@@ -637,7 +637,7 @@ const attolia = {
     {
       text:
         "> The doctor comes to attend to Gen, and he tosses you the spare hand on his way out.", // use \n character for new lines
-      img: "img/attolia1.png",
+      img: "img/attolia2.png",
     },
   ],
   question: "Megan didn’t say anything about this! Now what? ",
