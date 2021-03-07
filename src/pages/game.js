@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, navigate } from "gatsby";
 import { Layout } from "components/Layout";
 import ColorPicker from "components/ColorPicker";
@@ -27,8 +27,8 @@ const GamePage = () => {
     setShowQuestion(false);
     setSceneEndMessage("");
     setOptionSelectedIdx(null);
-    if (scene.audio) {
-      const newRoomAudio = new Audio(scene.audio);
+    if (scene && scene.audio) {
+      const newRoomAudio = new Audio(`../${scene.audio}`);
       setRoomAudio(newRoomAudio);
       newRoomAudio.play();
     }
@@ -40,7 +40,7 @@ const GamePage = () => {
       resetScene(scenes["catusRoom"]);
     } else if (scene === scenes["youDie"]) {
       resetScene(null);
-    } else if (sceneEndMessage && (scene === scenes["finalScene"])) {
+    } else if (sceneEndMessage && scene === scenes["finalScene"]) {
       navigate("/end");
     } else if (sceneEndMessage) {
       const { leadsTo } = scene.options[optionSelectedIdx];
