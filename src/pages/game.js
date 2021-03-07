@@ -14,18 +14,26 @@ const GamePage = () => {
   const [showQuestion, setShowQuestion] = useState(false);
   const [sceneEndMessage, setSceneEndMessage] = useState("");
   const [optionSelectedIdx, setOptionSelectedIdx] = useState(null);
+  const [roomAudio, setRoomAudio] = useState(null);
+  const [optionAudio, setOptionAudio] = useState(null);
 
   const resetScene = (scene) => {
+    roomAudio && roomAudio.pause()
+    optionAudio && optionAudio.pause()
     setScene(scene);
     setDescriptionIdx(0);
     setShowQuestion(false);
     setSceneEndMessage("");
     setOptionSelectedIdx(null);
+    const newRoomAudio = new Audio(scene.audio)
+    setRoomAudio(newRoomAudio)
+    setOptionAudio(null)
+    newRoomAudio.play()
   };
 
   const handleNextClick = () => {
     if (!scene) {
-      setScene(scenes["catusRoom"]);
+      resetScene(scenes["catusRoom"]);
     } else if (sceneEndMessage) {
       const { leadsTo } = scene.options[optionSelectedIdx];
       if (!leadsTo) {
@@ -46,8 +54,12 @@ const GamePage = () => {
     if (!showQuestion || idx >= scene.options.length) {
       return;
     }
-
     const { audio, message } = scene.options[idx];
+    if (audio) {
+      const audioFile = new Audio(audio);
+      setOptionAudio(audioFile)
+      audioFile.play()
+    }
     setSceneEndMessage(message);
     setOptionSelectedIdx(idx);
   };
