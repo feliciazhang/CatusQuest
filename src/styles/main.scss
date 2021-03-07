@@ -42,6 +42,7 @@ main {
 // TITLE PAGE
 .title-page {
   margin-top: 200px;
+  text-align: center;
 }
 
 .title {
@@ -51,6 +52,7 @@ main {
   line-height: 1.1em;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
     0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  animation: zoom 1s linear;
 }
 
 .start-btn {
@@ -64,6 +66,15 @@ main {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -91,13 +102,14 @@ main {
   height: 250px;
   top: 50px;
   left: 20%;
+  border-radius: 15px;
 }
 
 // ARROW BUTTONS
 .arrows {
   position: absolute;
   bottom: 25%;
-  left: 5%;
+  left: 6%;
   transform: translateY(50%);
 
   svg {
@@ -111,6 +123,7 @@ main {
 }
 
 // BOTTOM SCREEN
+// .color-picker-bg,
 .bottom-screen {
   box-sizing: border-box;
   position: absolute;
@@ -131,9 +144,10 @@ main {
 // COLOR PICKER
 .sketch-picker {
   position: absolute;
-  bottom: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
+  width: 130px !important;
 }
 
 // ANSWER BUTTONS
@@ -161,7 +175,7 @@ main {
   width: 45px;
   height: 45px;
   cursor: $cursor-pointer;
-  
+
   &:focus {
     outline: 0;
   }
