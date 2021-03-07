@@ -96,26 +96,26 @@ const wrbb = {
       text: "Wannabe by the Spice Girls",
       leadsTo: "pen15",
       message: "So true, friendship never ends!",
-      audio: "",
+      audio: "audio/wannabe.mp3",
     },
     {
       text: "I Was Here by Beyoncé Knowles",
       leadsTo: "triwizard",
       message:
         "The hearts that you’ve touched will be the proof that you leave. ",
-      audio: "",
+      audio: "audio/i-was-here.mp3",
     },
     {
       text: "Supermassive Black Hole by Muse",
       leadsTo: "forks",
       message: "Set those souls alight!",
-      audio: "",
+      audio: "audio/supermassive-black-home.mp3",
     },
     {
       text: "Driver's License by Olivia Rodrigo",
       leadsTo: "dmv",
       message: "Red lights! Stop Signs!",
-      audio: "",
+      audio: "audio/drivers-license.mp3",
     },
   ],
   audio: "audio/PSAs.mp3",
@@ -142,13 +142,13 @@ const dmv = {
       leadsTo: "pen15", // use null if no way forward
       message:
         "Okay, law abiding biker!",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "These rules are better anyways. Thanks rift, no changes!",
       leadsTo: "goodwill", // name of next scene object
       message: "If you live long enough to bike again, you may regret this… ¯\_(ツ)_/¯",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/mii.mp3",
@@ -181,7 +181,7 @@ const jeffDavis = {
         "Knock on the door. Show him the world he could have created for Stiles and Derek with Tumblr fan edits. Help him get better.",
       leadsTo: "beaconHills",
       message: "Way to stick to what you believe in. You should ask him if he wants a pair of Sterek socks while you’re at it.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text:
@@ -232,7 +232,7 @@ const beaconHills = {
         "Track down Stiles and Derek so they can come help Scott face the Alphas. Then, find a way to break them up (probably by seducing Stiles). It’s the only way.",
       leadsTo: "ilMondo",
       message: "Don’t cry because it’s over, smile because it happened.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/teenwolf.mp3",
@@ -270,7 +270,7 @@ const pen15 = {
       leadsTo: "bike", // use null if no way forward
       message:
         "No one who would give up their own heart could ever be UGIS. #Junglin4ever",
-      audio: "audio/agh.mp3",
+      audio: "audio/success.mp3",
     },
     {
       text: "Catalina Berretta",
@@ -308,7 +308,7 @@ const solidGround = {
       text: "Ask for Lucia instead. ",
       leadsTo: "ryderHall", // name of next scene object
       message: "Order is restored! Keith will scare away too many customers with his RBF. He should stick to what he does best: egg sandwiches.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/solidground.mp3",
@@ -368,13 +368,13 @@ const prideAndPrejudice = {
       leadsTo: "attolia", // use null if no way forward
       message:
         "Even though you are initially shunned from society, Darcy decides to make a decent woman of you and proposes. As we know \“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\” Too bad you have places to be! He will have to find a new love to replace the hole in his heart.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Engage Elizabeth in a battle of wits and end with the retort \“I could easily forgive your pride if you had not mortified mine\"",
       leadsTo: "ilMondo",// name of next scene object
       message: "Elizabeth concedes in your battle. She tells you “For what do we live, but to make sport for our neighbors, and laugh at them in our turn?” She will now make more of an effort to forgive those around her.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/pnp.mp3",
@@ -440,13 +440,13 @@ const panamaAirport = {
       leadsTo: "hillside", // use null if no way forward
       message:
         "The condensation will be back in no time. Hop on a Copa flight and continue on.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Fix the thermostat but set it to 23° C. Be the change you want to see in the world.",
       leadsTo: "seven11", // name of next scene object
       message: "Sure you changed the fundamental structure of the universe, but in an eco-conscious way. God turns a blind eye.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/airport.mp3",
@@ -473,24 +473,24 @@ const facebook = {
       leadsTo: "dunks", // use null if no way forward
       message:
         "Nice memory! That was indeed not your caption, but actually a caption by Instagram user @glennjamin_franklin from September 2015.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "\"#topshop #notactualpurchases #reunion #missedyou #woolyhats woo\"",
       message: "I hate to break it to you but this caption was published by you in June 2013. You can never escape the #woolyhats. Try again.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
     {
       text: "\"How to: #narcissism 101 #painting #selfportrait\"",
       message:
         "Wrong! That #selfportrait was indeed posted by you in February 2014. Try again.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
     {
       text: "\"good friends support you (: #friends #balance\"",
       leadsTo: "cabot",
       message: "Correct! That was indeed not your caption, but actually a caption by Instagram user @oriannakane from September 2013.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/facebook.mp3",
@@ -512,23 +512,23 @@ const goodwill = {
       leadsTo: "solidGround", // use null if no way forward
       message:
         "Imagine the Monday possibilities… ",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Something brown",
       message: "Okay, Bella Swan. Enough is enough.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
     {
-      text: "A humerous mug",
+      text: "A humorous mug",
       leadsTo: "seven11", // name of next scene object
       message: "Just different enough from the 20 you have at home! Great choice.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Something structured and form fitting",
       message: "Your mom would be proud! Unfortunately, Goodwill does not currently carry this item. Try again.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
   ],
   audio: "audio/goodwill.mp3",
@@ -588,12 +588,12 @@ const seven11 = {
       leadsTo: "fantasySuite", // use null if no way forward
       message:
         "Excellent choice! Stoners start to re-populate their natural habitat, and soon the ecosystem is fully restored: Half Baked and Spicy Hot Cheetos stretching as far as the eye can see. Mission Hill residents rejoice and the 7/11 looks like it will be able to thrive in this reality for years to come.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Takis Tostinos Pizza Bites",
       message: "Management agrees, and they even try a few themselves. But the bites aren’t good enough to convince the owners to ditch the ‘veg and return the snack business.Try again.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
   ],
   audio: "audio/711.mp3",
@@ -620,7 +620,7 @@ const ilMondo = {
       text: "Felicia",
       leadsTo: "stardew", // name of next scene object
       message: "Glenn is trying to be vegan and you are helping her to walk the virtuous path. This reality is repaired!",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/ilmondo.mp3",
@@ -652,7 +652,7 @@ const attolia = {
       text: "Cook it. Ask Gen if he would like to try a bite.",
       leadsTo: "facebook", // name of next scene object
       message: "Beef. Pork. Chicken. Hand!",
-      audio: "",
+      audio: "audio/success.mp3",
     },
   ],
   audio: "audio/attolia.mp3",
@@ -679,13 +679,13 @@ const triwizard = {
       text: "\"rip\"",
       message:
         "Umm, his son just died? You call that cinema? Try again. This time with a little more emotion.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
     {
       text: "\"THAT’S MY BOYYYYY!!!!!!!\"",
       leadsTo: "bike", // name of next scene object
       message: "Well put!",
-      audio: "",
+      audio: "audio/thats-my-boy.mp3",
     },
   ],
   audio: "audio/twt.mp3",
@@ -785,12 +785,12 @@ const cabot = {
       leadsTo: "nathanForYou", // use null if no way forward
       message:
         "That'll show 'em",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Meh… just come back tomorrow.",
       message: "#ProtectThePack man!",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
   ],
   audio: "audio/mii.mp3",
@@ -818,18 +818,18 @@ const bike = {
       leadsTo: "hillside", // use null if no way forward
       message:
         "A classic. You ride into the sunset with no hands to flex on all the children and geese.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "To the bike shop in Cambridge",
       leadsTo: "ryderHall", // name of next scene object
       message: "Heh good choice. Now go get that cute guy’s number.",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Towards an oddly wide road that curves out of view",
       message: "Bro, you just rode your bike onto the frickin freeway. Get the hell out of there and choose again.",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
   ],
   audio: "audio/sounis.mp3",
@@ -857,12 +857,12 @@ const nathanForYou = {
       leadsTo: "finalScene", // use null if no way forward
       message:
         "The plan? Ask exorcist Carlos Oliveira to help you navigate through the spiritual world to get back home. ",
-      audio: "",
+      audio: "audio/come-out.mp3",
     },
     {
       text: "Order a pumpkin spice latte",
       message: "You’re not going to ask the inventor of the Soundproof Sex Box for Parents for help? Are you sure?",
-      audio: "",
+      audio: "audio/sad-trombone.mp3",
     },
   ],
   audio: "audio/nathan.mp3",
@@ -900,7 +900,7 @@ const fantasySuite = {
       leadsTo: "finalScene", // use null if no way forward
       message:
         "Well that’s one way of doing it… looks like you ran out of there so fast you made it back to your dimension. Nice work! ",
-      audio: "",
+      audio: "audio/success.mp3",
     },
     {
       text: "Tell Matt you're falling for him too.",
@@ -953,7 +953,7 @@ const youDie = {
       img: "",
     },
   ],
-  audio: "audio/mii.mp3",
+  audio: "audio/game-over.mp3",
   img: "img/rip.png",
 };
 
