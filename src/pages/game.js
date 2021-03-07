@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { Layout } from "components/Layout";
 import ColorPicker from "components/ColorPicker";
 import TopScreen from "components/TopScreen";
@@ -28,7 +28,6 @@ const GamePage = () => {
     setSceneEndMessage("");
     setOptionSelectedIdx(null);
     if (scene.audio) {
-      console.log(scene.audio);
       const newRoomAudio = new Audio(scene.audio);
       setRoomAudio(newRoomAudio);
       newRoomAudio.play();
@@ -39,8 +38,10 @@ const GamePage = () => {
   const handleNextClick = () => {
     if (!scene) {
       resetScene(scenes["catusRoom"]);
-    } else if (scene === scenes["youDie" || scene === scenes["finalScene"]]) {
+    } else if (scene === scenes["youDie"]) {
       resetScene(null);
+    } else if (showQuestion && (scene === scenes["finalScene"])) {
+      navigate("/end");
     } else if (sceneEndMessage) {
       const { leadsTo } = scene.options[optionSelectedIdx];
       if (!leadsTo) {
@@ -69,7 +70,7 @@ const GamePage = () => {
       audioFile.play();
       setTimeout(() => {
         audioFile.pause();
-      }, 2000);
+      }, 3000);
     }
     setSceneEndMessage(message);
     setOptionSelectedIdx(idx);
