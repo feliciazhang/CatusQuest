@@ -40,7 +40,7 @@ const GamePage = () => {
       resetScene(scenes["catusRoom"]);
     } else if (scene === scenes["youDie"]) {
       resetScene(null);
-    } else if (showQuestion && (scene === scenes["finalScene"])) {
+    } else if (sceneEndMessage && (scene === scenes["finalScene"])) {
       navigate("/end");
     } else if (sceneEndMessage) {
       const { leadsTo } = scene.options[optionSelectedIdx];
@@ -68,8 +68,14 @@ const GamePage = () => {
       setOptionAudio(audioFile);
       audioFile.currentTime = audioTime;
       audioFile.play();
+      if (roomAudio) {
+        roomAudio.volume = 0.2;
+      }
       setTimeout(() => {
         audioFile.pause();
+        if (roomAudio) {
+          roomAudio.volume = 1;
+        }
       }, 3000);
     }
     setSceneEndMessage(message);
