@@ -64,16 +64,16 @@ const zachsCave = {
       img: "img/cave6.png",
     },
   ],
-  question: "Choose a door.",
+  question: "Choose a path.",
   options: [
     {
-      text: "Door 1",
+      text: "Left",
       leadsTo: "jeffDavis",
       message: "Interesting choice...",
       audio: "audio/laugh1.mp3",
     },
     {
-      text: "Door 2",
+      text: "Right",
       leadsTo: "wrbb",
       message: "Interesting choice...",
       audio: "audio/laugh2.mp3",
@@ -878,7 +878,7 @@ const nathanForYou = {
 };
 
 
-const dmv fantasySuite= {
+const  fantasySuite = {
   descriptions: [
     {
       text:
