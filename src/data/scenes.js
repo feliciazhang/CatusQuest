@@ -356,6 +356,38 @@ const stardew = {
   img: "",
 };
 
+const prideAndPrejudice = {
+  descriptions: [
+    {
+      text:
+        ">  Rolling green hills. Misty skies. A stone gazebo offering refuge from the rain. Before you can stop yourself, your hand flexes and clenches into a tight fist. \n> You, but British: Blimey… it’s Pride and Prejudice 2005!",
+      img: "",
+    },
+    {
+      text:
+        ">  After a long day of questing, you deserve to steep in some Victorian drama to take the edge off. \n> Everything is quiet in the countryside, though. A little too quiet...",
+      img: "",
+    },
+  ],
+  question: "Help get the story going. Which scandalous behavior do you partake in?",
+  options: [
+    {
+      text: "> A… Let Mr. Darcy take your virginity and ruin your family",
+      leadsTo: null, // use null if no way forward
+      message:
+        "Even though you are initially shunned from society, Darcy decides to make a decent woman of you and proposes. As we know \“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\” Too bad you have places to be! He will have to find a new love to replace the hole in his heart.",
+      audio: "audio/not-complete.mp3",
+    },
+    {
+      text: "> B… Engage Elizabeth in a battle of wits and end with the retort \“I could easily forgive your pride if you had not mortified mine\"",
+      leadsTo: null,// name of next scene object
+      message: "",
+      audio: "audio/not-complete.mp3",
+    },
+  ],
+  audio: "audio/pnp.mp3",
+  img: "img/prideandpred.png",
+};
 
 export const scenes = {
   catusRoom,
@@ -364,10 +396,9 @@ export const scenes = {
   dmv,
   jeffDavis,
   beaconHills,
-  pen15, 
-  goodwill, 
-  bike, 
+  pen15,  
   solidGround, 
-  stardew
+  stardew, 
+  prideAndPrejudice
 };
 
